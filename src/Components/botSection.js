@@ -4,12 +4,10 @@ import {nasaURL, apiKey, keyConnect} from '../nasaUrl'
 import styled, { keyframes } from 'styled-components'
 
 
-const kf = keyframes`
 
-`
 
 const Wrapper = styled.h2`
-  color: red;
+  color: #F890E7;
   font-family: "Comic Sans MS";
 `
 const Paragraph = styled.p`

@@ -1,6 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import {nasaURL, apiKey, keyConnect} from '../nasaUrl'
+import styled from 'styled-components'
+
+const Image = styled.img`
+    max-width: 40%;
+    max-height: 50%;
+`
 
 
 export default function MidSection (){
@@ -20,7 +26,8 @@ useEffect(() =>{
 
 return (
     <div className="image-container">
-      <img src={image} alt="spacephoto"/>
+
+      <Image src={image} alt="spacephoto"/>
   </div>
 
 )

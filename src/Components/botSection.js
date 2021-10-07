@@ -1,6 +1,27 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import {nasaURL, apiKey, keyConnect} from '../nasaUrl'
+import styled, { keyframes } from 'styled-components'
+
+
+const kf = keyframes`
+
+`
+
+const Wrapper = styled.h2`
+  color: red;
+  font-family: "Comic Sans MS";
+`
+const Paragraph = styled.p`
+    color: #F890E7;
+    max-width: 100%;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    font-family: "Comic Sans MS";
+    
+`
+
 
 
 export default function BotSection (){
@@ -42,10 +63,11 @@ export default function BotSection (){
     }, [])  
 
     return (
+        
         <div className="imageInformation">
-<h2>Date: {date} </h2>
-<p>Photographer: {copyright}</p>
-<p>{explanation}</p>
+<Wrapper>Photographer: {copyright}</Wrapper>
+<Paragraph> Date: {date} </Paragraph>
+<Paragraph>{explanation}</Paragraph>
 </div>
 
 

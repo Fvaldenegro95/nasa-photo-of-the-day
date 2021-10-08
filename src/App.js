@@ -7,17 +7,35 @@ import axios from "axios";
 import MidSection from "./Components/midSection";
 import BotSection from "./Components/botSection";
 import TopSection from "./Components/topSection";
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 
 // import { ThemeProvider } from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import theme from './Theme/index'
 
-const Body = styled.body`
-  background-image:linear-gradient(160deg, black, #033A3A);
+const kf = keyframes`
+0% {
+  background-color: #141414;
+}
+25%{
+  background-color: #730761;
+}
+50% {
+  background-color: #067474;
+}
+75%{
+  background-color: #730761;
+}
+100% {
+  background-color: #141414 ;
+}`
+
+
+const BodyStyle = styled.body`
   margin-bottom: -50px;
-  `
+  animation: ${kf} 5s infinite;
+`
 
 function App() {
 
@@ -39,15 +57,17 @@ console.log(nasaData)
 
   
   return (
+
     <div className="App">
-<Body>
+    <BodyStyle>
 
     <TopSection />
     <MidSection />
     <BotSection />
 
-</Body>
+    </BodyStyle>
     </div>
+
   );
 }
 
